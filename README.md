@@ -16,7 +16,13 @@ Dataset yang digunakan adalah gambar seekor anjing rhodesian ridgeback yang beru
 
 Dari sebuah gambar, gunakan konsep gradien untuk mendeteksi edge pada gambar dan lakukan operasi perkalian matriks pada gambar. Dengan langkah-langkah sebagai berikut:
 
-1. Hitung vektor gradien (turunan parsial) masing-masing pixel untuk masing-masing sumbu x dan y.
-2. Hitung gradient magnitude tiap pixel.
+1. Hitung vektor gradien (turunan parsial) masing-masing pixel untuk masing-masing sumbu x dan y dengan rumus:
+
+   $$\frac{\partial I}{\partial x},\frac{\partial I}{\partial y}$$
+
+2. Hitung gradient magnitude tiap pixel dengan rumus:
+
+   $$\sqrt{(\frac{\partial I}{\partial x})^{2} + (\frac{\partial I}{\partial y})^{2}}$$
+
 3. Jika nilai magnitude melebihi angka threshold, maka edge terdeteksi (Biasanya threshold ~ 30).
 4. Untuk operasi matriks, buat matriks dengan nilai apapun yang bersesuaian dengan ukuran gambar dan sesuai dengan aturan perkalian matriks.
